@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  befunge93:
+    build: ./
+    volumes:
+      - ./share:/home/ctf:ro
+      - ./xinetd:/etc/xinetd.d/ctf:ro
+    ports:
+      - "10101:10101"
